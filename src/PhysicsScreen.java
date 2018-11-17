@@ -1,6 +1,6 @@
-//package Screens;
+package src;//package Screens;
 
-//import Screens.Screen;
+//import Screens.src.Screen;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -100,26 +100,20 @@ public class PhysicsScreen extends Screen {
             if (a == mouseAttractor) {
                 if (a.sign > 0) g.setColor(Color.RED);
                 else g.setColor(Color.BLUE);
-//                g.setColor(Color.LIGHT_GRAY);
                 g.drawOval(a.pos.x - (mass / 2), a.pos.y - mass / 2, mass, mass);
             }
-//            else {
-//                if (a.sign > 0) g.setColor(Color.RED);
-//                else g.setColor(Color.BLUE);
-//                g.fillOval(a.pos.x - ((int) a.size / 2), a.pos.y - (int) a.size / 2, (int) a.size, (int) a.size);
-//            }
         }
     }
 
     @Override
     public void drawInfo(Graphics g) {
         g.setColor(Color.BLACK);
-        g.fillRect(0,0,270,70);
+        g.fillRect(0, 0, 270, 70);
         g.setColor(Color.WHITE);
-        String arr[] ={"Physics simulation","LMB to positive attraction"
-                ,"RMB to negative","Scroll wheel to control amount of force"};
-        for(int i=0;i<arr.length;i++){
-            g.drawChars(arr[i].toCharArray(),0,arr[i].length(),10,15*(i+1));
+        String arr[] = {"Physics simulation", "LMB to positive attraction"
+                , "RMB to negative", "Scroll wheel to control amount of force"};
+        for (int i = 0; i < arr.length; i++) {
+            g.drawChars(arr[i].toCharArray(), 0, arr[i].length(), 10, 15 * (i + 1));
         }
     }
 
